@@ -1,0 +1,75 @@
+body{
+    font-family: helvetica;
+}
+
+a{text-decoration: none;}
+a:visited{color: rgb(95, 93, 93);}
+a:link{color: rgb(95, 93, 93);}
+a:active{color: rgb(95, 93, 93);}
+a:hover{color: black;}
+
+
+.nav{
+    position: fixed;
+    top:0;
+    left: 0;
+    width: 100%;
+    font-family: helvetica;
+    transition: all .5s !important;
+    z-index: 10;
+}
+
+.nav-fix{
+    position: fixed;
+    display: flex;
+    top:0;
+    left:0;
+    width: 100%;
+    font-size: 1.5em;
+    margin-top: 1.2em;
+    
+}
+
+.logo{
+    font-weight: bold;
+    font-size: 1.3em;
+    flex: 4;
+    margin-left: 1.5em;
+}
+
+.nav-item{
+    display: inline-flex;
+    margin-left: auto;
+    flex: 1;
+    align-items: center; /* 상하 중앙 */
+    justify-content: space-around; /* 좌우 중앙 */
+}
+
+#menu-btn{
+    margin-right: 1em;
+}
+
+.nav-pop{
+    position: absolute;
+    display: none;
+    top:0;
+    left:0;
+    width: 100vw;
+    height: 100vh;
+    background: #ff6565;
+    color: white;
+    transition: .5s all;
+    z-index: -1;
+}
+
+.active{
+    display: block;
+}
+
+.nav-list{
+    color: hsla(0,0%,100%,0);
+    text-shadow: 1px white;
+    color:white;
+
+}
+
