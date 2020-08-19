@@ -42,7 +42,3 @@
 .p1:hover>.p2 {
     color: black;
 }
-.p2:hover{
-    transform: translateY(-100px);
-}
-
