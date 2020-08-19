@@ -1,0 +1,130 @@
+
+.p3 {
+    position: relative;
+}
+
+.p4{
+    font-size: 5em;
+    color:white;
+    z-index: 3;
+}
+
+.p3:hover > .p4 {
+    color: white;    
+}
+
+.p4::before,
+.p4::after {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    content: attr(data-cont);
+    z-index: -1;
+    position: absolute;
+}
+.p4::before {
+    color: #FFBF00;
+}
+.p4::after {
+    color: #FF0000;
+}
+
+.p3:hover > .p4::before{
+    animation: fire 3s infinite;
+}
+.p3:hover > .p4::after{
+    animation: fire2 1.5s infinite;
+}
+
+@keyframes fire {
+    0% {
+        filter: blur(22px);
+    }
+
+    10% {
+        filter: blur(32px);
+    }
+
+    20% {
+        filter: blur(42px);
+    }
+
+    30% {
+        filter: blur(24px);
+    }
+
+    40% {
+        filter: blur(12px);
+    }
+
+    50% {
+        filter: blur(30px);
+    }
+
+    60% {
+        filter: blur(25px);
+    }
+
+    70% {
+        filter: blur(32px);
+    }
+
+    80% {
+        filter: blur(25px);
+    }
+
+    90% {
+        filter: blur(30px);
+    }
+
+    100% {
+        filter: blur(20px);
+    }
+}
+
+@keyframes fire2 {
+    0% {
+        filter: blur(7px);
+    }
+
+    10% {
+        filter: blur(17px);
+    }
+
+    20% {
+        filter: blur(12px);
+    }
+
+    30% {
+        filter: blur(8px);
+    }
+
+    40% {
+        filter: blur(18px);
+    }
+
+    50% {
+        filter: blur(6px);
+    }
+
+    60% {
+        filter: blur(9px);
+    }
+
+    70% {
+        filter: blur(12px);
+    }
+
+    80% {
+        filter: blur(10px);
+    }
+
+    90% {
+        filter: blur(5px);
+    }
+
+    100% {
+        filter: blur(17px);
+    }
+}
