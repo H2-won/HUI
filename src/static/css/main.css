@@ -35,10 +35,19 @@
     background-size: 100% 100%;
 }
 
-.p1 {
+.psub {
     color: rgb(148, 148, 148)
 }
 
-.p1:hover>.p2 {
+.psub:hover>.pname {
     color: black;
+}
+
+.second{
+    padding-top: 5em;
+    background-image: url(../img/mansbuy-back.jpg);
+}
+
+.project{
+    margin-top: 1em;
 }
