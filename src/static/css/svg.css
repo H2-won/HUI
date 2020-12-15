@@ -1,0 +1,133 @@
+:root {
+  --deepPurple: #3E2551;
+  --purple: #D475E5;
+  --darkPurple: #B09AB4;
+  --red: #F63E61;
+  --darkPink: #FF6582;
+  --dark: #121212;
+  --darkGray: #3C4042;
+
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+  background: #121212;
+}
+
+/* --------------------- background animation -------------------- */
+.svgContainer {
+  position: absolute;
+  z-index: -1;
+  min-height: 100vh;
+  width: 100%;
+  /* overflow-y: hidden; */
+  top: -1vh;
+  left: 25%;
+}
+
+svg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  fill: var(--deepPurple);
+  stroke: var(--deepPurple);
+  width: 103vh;
+  height: 102vh;
+  -webkit-animation: circleRotating 5s linear infinite;
+  -moz-animation: circleRotating 5s linear infinite;
+  -ms-animation: circleRotating 5s linear infinite;
+  -o-animation: circleRotating 5s linear infinite;
+  animation: circleRotating 5s linear infinite;
+}
+
+@keyframes circleRotating {
+  from {
+    -ms-transform: rotate(0deg) scale(1.75, 1.75);
+    -moz-transform: rotate(0deg) scale(1.75, 1.75);
+    -webkit-transform: rotate(0deg) scale(1.75, 1.75);
+    -o-transform: rotate(0deg) scale(1.75, 1.75);
+    transform: rotate(0deg) scale(1.75, 1.75);
+  }
+
+  to {
+    -ms-transform: rotate(360deg) scale(1.75, 1.75);
+    -moz-transform: rotate(360deg) scale(1.75, 1.75);
+    -webkit-transform: rotate(360deg) scale(1.75, 1.75);
+    -o-transform: rotate(360deg) scale(1.75, 1.75);
+    transform: rotate(360deg) scale(1.75, 1.75);
+  }
+}
+
+/* ------------------------- nav --------------------------- */
+.navBar{
+  z-index: 1;
+  padding: 32px 36px;
+}
+
+.icon {
+  color: var(--red);
+  font-size: 2rem;
+}
+
+/* --------------- conponent ------------- */
+.component{
+  width: 250px;
+  text-align: center;
+  font-size: 1.5rem;
+  position: absolute;
+  color: var(--purple);
+  transition: .5s all;
+}
+
+.componentTitle{
+  transition: .5s all;
+}
+
+.componentLine{
+  width: 150px;
+  border: 0;
+  height: 2px;
+  background: var(--purple);
+  text-align: center;
+  margin: 4px auto 8px auto;
+  transition: .5s
+   all;
+}
+.componentBtn{
+  background: var(--darkGray);
+  color: var(--darkPurple);
+  border: none;
+  border-radius: 6px;
+  padding: 6px 8px 6 12px;
+  letter-spacing:4px;
+  transition: .5s all;
+  cursor: pointer;
+}
+
+
+.component:nth-child(1){
+  left: 0;
+}
+.component:nth-child(2){
+  left: 72%;
+  top:28%;
+}
+.component:nth-child(3){
+  left: 60%;
+  top: 65%;
+}
+.component:nth-child(4){
+  left: 18%;
+  top: 37%;
+}
+.component:nth-child(5){
+  left: 11%;
+  top: 70%;
+}
+.component:nth-child(6){
+  left: 45%;
+  top: 15%;
+}

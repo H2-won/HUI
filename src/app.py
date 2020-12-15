@@ -4,7 +4,7 @@ app = Flask(__name__, instance_relative_config=True)
 
 @app.route('/')
 def home():
-   return render_template('main.html')
+   return render_template('svg.html')
 
 
 ### 실행
