@@ -1,0 +1,67 @@
+.second-container{
+    position: relative;
+}
+
+.second {
+    width: 100%;
+    height: 95vh;
+    text-align: center;
+    font-family: -apple-system, Helvetica, "Apple Color Emoji", Arial;
+    font-weight: 700;
+}
+
+.underline {
+    line-height: 1.2;
+    font-size: 3em;
+    background-image: linear-gradient(transparent calc(100% - 3px), #000 3px);
+    background-repeat: no-repeat;
+    background-size: 0% 100%;
+    transition: background-size 0.8s;
+    color: #000;
+    cursor: pointer;
+}
+
+@media (min-width: 1000px) {
+    .underline {
+        font-size: 5em;
+    }
+}
+
+.underline.yellow {
+    background-image: linear-gradient(transparent 60%, #F8CD07 40%);
+}
+
+.underline.pink {
+    background-image: linear-gradient(transparent 60%, #e84393 40%);
+}
+
+.underline:hover {
+    background-size: 100% 100%;
+}
+
+.psub {
+    color: rgb(148, 148, 148)
+}
+
+.psub:hover>.pname {
+    color: black;
+}
+
+.second{
+    padding-top: 5em;
+}
+
+.second-back{
+    width: 100%;
+    height: 100vh;
+    background-image: url(../img/mansbuy-back.jpg);
+    z-index: -2;
+    position: absolute;
+    top:0;
+    left:0;
+    transition: .5s all;
+}
+
+.project{
+    margin-top: 1em;
+}

@@ -1,17 +1,25 @@
-document.querySelector("#menu-btn").addEventListener("click",function(){
-    document.querySelector(".nav-pop").classList.toggle("active");
-})
+function componentHovering() {
 
-document.querySelector(".p4").attributes[1].nodeValue = document.querySelector(".p4").childNodes[0].textContent;
+    const components = document.querySelectorAll('.component');
+    const title = document.querySelectorAll('.componentTitle');
+    const line = document.querySelectorAll('.componentLine');
+    const btn = document.querySelectorAll('.componentBtn');
 
-document.querySelector("#p1").addEventListener("mouseover",function(){
-    document.querySelector(".second-back").style.backgroundImage = "url('../static/img/mansbuy-back.jpg')"
-})
+    components.forEach((component, i) => {
+        component.addEventListener('mouseover', (e) => {
+            title[i].style.color="var(--red)"
+            line[i].style.background="var(--red)";
+            btn[i].style.color="var(--darkPink)";
+            btn[i].style.background="#252425";
+        });
+        component.addEventListener('mouseout', (e) => {
+            title[i].style.color="var(--purple)"
+            line[i].style.background="var(--purple)";
+            btn[i].style.color="var(--darkPurple)";
+            btn[i].style.background="var(--darkGray)";
+        });
+    });
 
-document.querySelector("#p2").addEventListener("mouseover",function(){
-    document.querySelector(".second-back").style.backgroundImage = "url('../static/img/calendar-back.jpg')"
-})
+}
 
-document.querySelector("#p3").addEventListener("mouseover",function(){
-    document.querySelector(".second-back").style.backgroundImage = "url('../static/img/mansbuy-back.jpg')"
-})
+componentHovering();

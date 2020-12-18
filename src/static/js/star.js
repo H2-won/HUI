@@ -17,3 +17,5 @@ while(i<cnt){
     scene.appendChild(star);
     i++
 }
+
+// 화면 크기 변환 시 star 다시 불러오기 추가
