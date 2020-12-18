@@ -1,6 +1,7 @@
 let cnt = 20;
 let scene = document.querySelector(".scene");
 let i=0;
+
 while(i<cnt){
     let star = document.createElement('i');
     let x = Math.floor(Math.random() * window.innerWidth);
