@@ -7,16 +7,16 @@ function componentHovering() {
 
     components.forEach((component, i) => {
         component.addEventListener('mouseover', (e) => {
-            title[i].style.color="var(--red)"
-            line[i].style.background="var(--red)";
-            btn[i].style.color="var(--darkPink)";
-            btn[i].style.background="#252425";
+            title[i].style.color = "var(--red)"
+            line[i].style.background = "var(--red)";
+            btn[i].style.color = "var(--darkPink)";
+            btn[i].style.background = "#252425";
         });
         component.addEventListener('mouseout', (e) => {
-            title[i].style.color="var(--purple)"
-            line[i].style.background="var(--purple)";
-            btn[i].style.color="var(--darkPurple)";
-            btn[i].style.background="var(--darkGray)";
+            title[i].style.color = "var(--purple)"
+            line[i].style.background = "var(--purple)";
+            btn[i].style.color = "var(--darkPurple)";
+            btn[i].style.background = "var(--darkGray)";
         });
     });
 

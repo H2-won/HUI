@@ -51,67 +51,51 @@
     <div class="components">
         <div class="component">
             <div class="componentTitle">Rocket Animation</div>
-            <hr class="componentLine"/>
+            <hr class="componentLine" />
             <button class="componentBtn" onclick="location.href='/HUI/rocket'">DEMO</button>
         </div>
-    
+
         <div class="component">
             <div class="componentTitle">Parallax Effect</div>
-            <hr class="componentLine"/>
+            <hr class="componentLine" />
             <button class="componentBtn">DEMO</button>
         </div>
-    
+
         <div class="component">
             <div class="componentTitle">Eyes Following Cursor</div>
-            <hr class="componentLine"/>
+            <hr class="componentLine" />
             <button class="componentBtn">DEMO</button>
         </div>
-    
+
         <div class="component">
             <div class="componentTitle">HorizontalPage scrolling</div>
-            <hr class="componentLine"/>
+            <hr class="componentLine" />
             <button class="componentBtn">DEMO</button>
         </div>
-    
+
         <div class="component">
             <div class="componentTitle">Clip-path Effect</div>
-            <hr class="componentLine"/>
+            <hr class="componentLine" />
             <button class="componentBtn">DEMO</button>
         </div>
 
         <div class="component">
             <div class="componentTitle">Power Of Light</div>
-            <hr class="componentLine"/>
+            <hr class="componentLine" />
             <button class="componentBtn">DEMO</button>
         </div>
+
         <div class="component">
             <div class="componentTitle">3D Parallax</div>
-            <hr class="componentLine"/>
+            <hr class="componentLine" />
             <button class="componentBtn">DEMO</button>
         </div>
+        
         <div class="cursor"></div>
     </div>
-    
+
 </body>
 
-<script type="text/javascript">
-    (function(l) {
-        if (l.search) {
-          var q = {};
-          l.search.slice(1).split('&').forEach(function(v) {
-            var a = v.split('=');
-            q[a[0]] = a.slice(1).join('=').replace(/~and~/g, '&');
-          });
-          if (q.p !== undefined) {
-            window.history.replaceState(null, null,
-              l.pathname.slice(0, -1) + (q.p || '') +
-              (q.q ? ('?' + q.q) : '') +
-              l.hash
-            );
-          }
-        }
-      }(window.location))
-</script>
 <script src="src/static/js/main.js"></script>
 <script src="src/static/js/cursor.js"></script>
 
