@@ -4,10 +4,8 @@
   cursor: none;
 }
 
-a, a:hover{
+a, a:hover, a:visited{
   text-decoration: none;
-}
-a:visited{
   color: #F63E61;
 }
 
