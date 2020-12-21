@@ -102,3 +102,30 @@ section h2 {
     height: 5rem;
     border: 2.2px solid #F63E61;
 }
+
+.eyeBox{
+    display:flex;
+}
+.eyeBox .eye{
+    position:relative;
+    width: 120px;
+    height: 120px;
+    display:block;
+    background: #fff;
+    margin: 0 20px;
+    border-radius: 50%;
+    box-shadow: 0 5px 45px rgba(0, 0, 0, 0.2);
+}
+.eyeBox .eye:before{
+    content: "";
+    position: absolute;
+    top:50%;
+    left: 35px;
+    transform: translate(-50%, -50%);
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background:#000;
+    border:10px solid #2196f3;
+    box-sizing: border-box;
+}
