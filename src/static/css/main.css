@@ -80,11 +80,12 @@ svg {
 
 /* ------------------------- nav --------------------------- */
 .navBar {
-  z-index: 2;
+  position: fixed;
+  z-index: 3;
   padding: 32px 36px;
 }
 
-.icon {
+.navBar .icon {
   color: var(--red);
   font-size: 2rem;
   font-weight: 700;
@@ -92,7 +93,7 @@ svg {
 
 /* --------------- conponent ------------- */
 .component {
-  z-index: 2;
+  z-index: 1;
   text-align: center;
   font-size: 1.1rem;
   position: absolute;
