@@ -98,39 +98,36 @@ section h2 {
     transition: width 0.2s, height 0.2s;
 }
 
-.icon:hover~.cursor {
-    width: 5rem;
-    height: 5rem;
-    border: 2.2px solid #F63E61;
-}
 
-.eyeBox{
+.eyeBox {
     z-index: 9;
-    display:flex;
+    display: flex;
     position: absolute;
-    top:20vh;
+    top: 20vh;
     left: 32.5vw;
 }
-.eyeBox .eye{
-    position:relative;
+
+.eyeBox .eye {
+    position: relative;
     width: 100px;
     height: 100px;
-    display:block;
+    display: block;
     background: rgb(201, 201, 201);
     margin: 0 5vw;
     border-radius: 50%;
     box-shadow: 0 2.5px 20px rgba(255, 255, 255, 0.2);
 }
-.eyeBox .eyeBall{
+
+.eyeBox .eyeBall {
     transition: border 0.5s ease;
     position: absolute;
-    top:50%;
+    top: 50%;
     left: 30px;
     transform: translate(-50%, -50%);
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    background:#262626;
-    border:8px solid #FF6912;
+    background: #262626;
+    border: 8px solid #FF6912;
     box-sizing: border-box;
 }

@@ -173,7 +173,7 @@ svg {
 }
 
 .component:hover ~ .cursor{
-  width: 8rem;
-  height: 8rem;
-  border: 2.2px solid var(--red);
+  width: 8rem !important;
+  height: 8rem !important;
+  border: 2.2px solid var(--red) !important;
 }

@@ -23,22 +23,25 @@ function eyeball(){
     });
 }
 
-const halloweenTitle = document.querySelector('section h2');
-const eyeBall = document.querySelectorAll('.eyeBall');
-const cursor = document.querySelector('.cursor');
-halloweenTitle.addEventListener('mouseover', ()=>{
-    halloweenTitle.style.color = '#62C110';
-    eyeBall[0].style.border = '10px solid #62C110';
-    eyeBall[1].style.border = '10px solid #62C110';
-    cursor.style.border = '2.2px solid #62C110';
-    cursor.style.width = '5em';
-    cursor.style.height = '5em';
-})
-halloweenTitle.addEventListener('mouseout', ()=>{
-    halloweenTitle.style.color = '#FF6912';
-    eyeBall[0].style.border = '10px solid #FF6912';
-    eyeBall[1].style.border = '10px solid #FF6912';
-    cursor.style.border = '4px solid #FF6912';
-    cursor.style.width = '0';
-    cursor.style.height = '0';
-})
+function halloweenTitleHovering(){
+    const halloweenTitle = document.querySelector('section h2');
+    const eyeBall = document.querySelectorAll('.eyeBall');
+    const cursor = document.querySelector('.cursor');
+    halloweenTitle.addEventListener('mouseover', ()=>{
+        halloweenTitle.style.color = '#62C110';
+        eyeBall[0].style.border = '10px solid #62C110';
+        eyeBall[1].style.border = '10px solid #62C110';
+        cursor.style.border = '2.2px solid #62C110';
+        cursor.style.width = '5em';
+        cursor.style.height = '5em';
+    })
+    halloweenTitle.addEventListener('mouseout', ()=>{
+        halloweenTitle.style.color = '#FF6912';
+        eyeBall[0].style.border = '10px solid #FF6912';
+        eyeBall[1].style.border = '10px solid #FF6912';
+        cursor.style.border = '4px solid #FF6912';
+        cursor.style.width = '0';
+        cursor.style.height = '0';
+    })
+}
+halloweenTitleHovering();
