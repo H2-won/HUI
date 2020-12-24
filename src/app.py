@@ -14,6 +14,14 @@ def rocket():
 def parallax():
    return render_template('parallax.html')
 
+@app.route('/clipPath')
+def clipPath():
+   return render_template('clipPath.html')
+
+@app.route('/light')
+def light():
+   return render_template('light.html')
+
 ### 실행
 if __name__ == '__main__':
 	app.run(host='0.0.0.0', debug=True, port='5000')

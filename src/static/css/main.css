@@ -24,7 +24,7 @@ body {
   height: 100vh;
   overflow: hidden;
   margin: 0;
-  background: #121212;
+  background: var(--dark);
 }
 
 
@@ -95,7 +95,7 @@ svg {
 .component {
   z-index: 1;
   text-align: center;
-  font-size: 1.1rem;
+  font-size: 1.3rem;
   position: absolute;
   color: var(--purple);
   transition: .3s all;
