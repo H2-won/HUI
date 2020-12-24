@@ -1,13 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Archivo:wght@500;700&display=swap');
 
 :root {
-  --deepPurple: #3E2551;
-  --purple: #D475E5;
-  --darkPurple: #B09AB4;
-  --red: #F63E61;
-  --darkPink: #FF6582;
-  --dark: #121212;
-  --darkGray: #3C4042;
+    --deepPurple: #3E2551;
+    --purple: #D475E5;
+    --darkPurple: #B09AB4;
+    --red: #F63E61;
+    --darkPink: #FF6582;
+    --dark: #121212;
+    --darkGray: #3C4042;
+    --white: #fff;
 }
 
 * {
@@ -28,7 +29,7 @@ a:visited {
     color: var(--red);
 }
 
-button:focus{
+button:focus {
     border: none;
     outline: none;
 }
@@ -45,7 +46,7 @@ button:focus{
     font-weight: 700;
 }
 
-.cursor{
+.cursor {
     z-index: 10;
     position: fixed;
     width: 0;
@@ -55,10 +56,15 @@ button:focus{
     transform: translate(-50%, -50%);
     pointer-events: none;
     transition: width 0.2s, height 0.2s;
-  }
-  
-  .icon:hover ~ .cursor{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--red);
+    font-size: 1rem;
+}
+
+.icon:hover~.cursor {
     width: 5rem;
     height: 5rem;
     border: 2.2px solid var(--red);
-  }
+}
