@@ -98,13 +98,13 @@ section h2 {
     transition: width 0.2s, height 0.2s;
 }
 
-
 .eyeBox {
     z-index: 9;
     display: flex;
+    justify-content: center;
     position: absolute;
     top: 20vh;
-    left: 32.5vw;
+    width: 100%;
 }
 
 .eyeBox .eye {

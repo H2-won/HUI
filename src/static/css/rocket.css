@@ -1,10 +1,12 @@
-*{
+* {
   margin: 0;
   padding: 0;
   cursor: none;
 }
 
-a, a:hover, a:visited{
+a,
+a:hover,
+a:visited {
   text-decoration: none;
   color: #F63E61;
 }
@@ -59,6 +61,12 @@ a, a:hover, a:visited{
 
 .rocket img {
   width: 4rem;
+  opacity: 0.5;
+  transition: .2s all;
+}
+
+.rocket img:hover {
+  opacity: 1;
 }
 
 @keyframes rocketAnimate {
@@ -107,7 +115,7 @@ a, a:hover, a:visited{
   filter: blur(1rem);
 }
 
-.cursor{
+.cursor {
   z-index: 10;
   position: fixed;
   width: 0;
@@ -119,7 +127,7 @@ a, a:hover, a:visited{
   transition: width 0.2s, height 0.2s;
 }
 
-.icon:hover ~ .cursor{
+.icon:hover~.cursor {
   width: 5rem;
   height: 5rem;
   border: 2.2px solid #F63E61;

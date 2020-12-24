@@ -28,6 +28,11 @@ a:visited {
     color: var(--red);
 }
 
+button:focus{
+    border: none;
+    outline: none;
+}
+
 .navBar {
     position: fixed;
     z-index: 10;

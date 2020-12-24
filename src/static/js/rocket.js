@@ -1,5 +1,5 @@
-let cnt = 20;
-let scene = document.querySelector(".scene");
+const cnt = 20;
+const scene = document.querySelector(".scene");
 let i=0;
 
 while(i<cnt){
@@ -17,5 +17,7 @@ while(i<cnt){
     scene.appendChild(star);
     i++
 }
+// 화면 크기 변환 시 star 다시 불러오기 추가하기
 
-// 화면 크기 변환 시 star 다시 불러오기 추가
+const rocket = document.querySelector('.rocket');
+mouseHovering(rocket, '#00d0ff', '4em');
