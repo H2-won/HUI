@@ -20,4 +20,4 @@ while(i<cnt){
 // 화면 크기 변환 시 star 다시 불러오기 추가하기
 
 const rocket = document.querySelector('.rocket');
-mouseHovering(rocket, '#00d0ff', '4em');
+mouseHovering(rocket, '', '#00d0ff', '4em');

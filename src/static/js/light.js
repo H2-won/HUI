@@ -5,4 +5,4 @@ pos.addEventListener('mousemove', e=>{
 })
 
 const titleLogo = document.querySelector('.titleLogo');
-mouseHovering(titleLogo, '#F63E61');
+mouseHovering(titleLogo, '', '#F63E61');
