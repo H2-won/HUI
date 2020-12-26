@@ -26,6 +26,10 @@ def light():
 def christmas():
    return render_template('christmas.html')
 
+@app.route('/horizontal')
+def horizontal():
+   return render_template('horizontalPage.html')
+
 ### 실행
 if __name__ == '__main__':
 	app.run(host='0.0.0.0', debug=True, port='5000')

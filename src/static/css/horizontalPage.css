@@ -1,0 +1,46 @@
+.container {
+    position: relative;
+    width: 100%;
+    display: flex;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    behavior: smooth;
+}
+
+.container section {
+    min-width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: var(--darkPurple);
+}
+
+.container section:nth-child(2) {
+    background: var(--red);
+}
+
+.container section:nth-child(3) {
+    background: var(--purple);
+}
+
+.container section:nth-child(4) {
+    background: var(--darkPink);
+}
+
+.content {
+    max-width: 800px;
+    padding: 40px;
+    text-align: center;
+}
+
+.content h2 {
+    font-size: 5em;
+    color: var(--white);
+}
+
+.cursor {
+    border: 4px solid var(--white);
+}
