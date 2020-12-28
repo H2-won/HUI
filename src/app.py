@@ -30,6 +30,10 @@ def christmas():
 def horizontal():
    return render_template('horizontalPage.html')
 
+@app.route('/3dParallax')
+def threedParallax():
+   return render_template('3dParallax.html')
+
 ### 실행
 if __name__ == '__main__':
 	app.run(host='0.0.0.0', debug=True, port='5000')
