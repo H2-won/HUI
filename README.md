@@ -16,8 +16,8 @@
 > 3. Merry Christmas
 > 4. 3D Parallax
 > 5. Clip-path Effect
-> 6. Power Of light
-> 7. Horizontal scrolling
+> 6. Power Of Light
+> 7. Horizontal Scrolling
 
 ### Demo Site
 > https://h2-won.github.io/HUI/

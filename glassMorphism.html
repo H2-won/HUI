@@ -1,0 +1,55 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GlassMorphism</title>
+    <link rel="stylesheet" href="src/static/css/default.css">
+    <link rel="stylesheet" href="src/static/css/glassMorphism.css">
+</head>
+
+<body>
+
+    <div class="navBar">
+        <div class="icon"><a href="/HUI">HUI</a></div>
+        <div class="cursor" color="#F63E61"></div>
+    </div>
+
+    <section>
+        <div class="color"></div>
+        <div class="color"></div>
+        <div class="color"></div>
+        <div class="color"></div>
+        <div class="box">
+            <div class="container">
+                <div class="form">
+                    <h2>Login Form</h2>
+                    <form>
+                        <div class="inputBox">
+                            <input type="text" placeholder="Username">
+                        </div>
+                        <div class="inputBox">
+                            <input type="password" placeholder="Password">
+                        </div>
+                        <div class="inputBox">
+                            <input type="submit" value="Login">
+                        </div>
+                        <p class="forget">Forgot Password ? <a href="#">Click Here</a></p>
+                        <p class="forget">Don't have an account ? <a href="#">Sign up</a></p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</body>
+
+<script src="src/static/js/cursor.js"></script>
+<script>
+    const submitBtn = document.querySelector('.submitBtn');
+    mouseHovering(submitBtn, '', '#F63E61', '4em');
+    const forgetBtns = document.querySelectorAll('.forget a');
+    forgetBtns.forEach((btn)=>mouseHovering(btn, '', '#F63E61', '2em'));
+</script>
+
+</html>
