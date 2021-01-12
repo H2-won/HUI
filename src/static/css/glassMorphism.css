@@ -95,7 +95,10 @@ section .color:nth-child(4){
 }
 .form .inputBox input{
     width:100%;
-    background: rgba(255, 255, 255, 0.2);
+    transition: all 0.4s cubic-bezier(0.64, 0.09, 0.08, 1);
+	background: linear-gradient(to bottom, rgba(255, 255, 255, 0.1) 96%, #fff 4%);
+	background-position: -1000px 0;
+	background-repeat: no-repeat;
     border:none;
     outline: none;
     padding: 10px 20px;
@@ -111,6 +114,20 @@ section .color:nth-child(4){
 .form .inputBox input::placeholder{
     color: #fff;
 }
+
+.form .inputBox input::before{
+    content: '';
+    position: absolute;
+    
+    left: 0;bottom: -10px;
+    width: 9rem;
+    height: 100px;
+}
+
+.form .inputBox input:focus{
+	background-position: 0 0;
+}
+
 .form .inputBox input[type="submit"]{
     background: #fff;
     color: grey;
