@@ -1,0 +1,93 @@
+*{
+    /* hide cursor */
+    cursor: none;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    background: #fff;
+}
+
+.cursor {
+    /* set some z-index */
+    z-index: 100;
+    
+    position: fixed;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    pointer-events: none;
+    transition: width 0.2s, height 0.2s;
+    transform: translate(-50%, -50%);
+
+    display:flex;
+    justify-content: center;
+    align-items: center;
+
+    /* if you want to change the innerText stlye */
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+/* -------------------- just for demo -------------------- */
+.navBar {
+    position: fixed;
+    z-index: 100;
+    padding: 32px 36px;
+    top: 0;
+    left: 0;
+}
+
+.icon a, .icon a:visited{
+    text-decoration: none;
+    color: #F63E61;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.container div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 250px;
+    height: 250px;
+    margin: 2rem;
+    color: #fff;
+    font-weight: 700;
+    font-size: 1.5rem;
+    border-radius: 8px;
+}
+
+.demoDiv1{
+    background: pink;
+}
+
+.demoDiv2{
+    background: #a29bfe;
+}
+
+.demoDiv3{
+    background: #74b9ff;
+}
+
+.demoDiv4{
+    background: #81ecec;
+}
+
+.demoDiv4 a, .demoDiv4 a:visited{
+    color: #fff;
+    text-decoration: none;
+    padding: 2rem;
+    background: #00cec9;
+    border-radius: 8px;
+}

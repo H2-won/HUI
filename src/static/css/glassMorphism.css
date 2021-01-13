@@ -1,31 +1,32 @@
-body{
+body {
     overflow: hidden;
 }
 
-.cursor{
+.cursor {
     border: 4px solid var(--red);
 }
 
-section{
+section {
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
     background: linear-gradient(to bottom, #f1f4f9, #dff1ff);
 }
+
 section .color {
     position: absolute;
     filter: blur(150px);
 }
 
-section .color:nth-child(1){
+section .color:nth-child(1) {
     top: -150px;
     width: 600px;
     height: 600px;
     background: hotpink;
 }
 
-section .color:nth-child(2){
+section .color:nth-child(2) {
     bottom: -100px;
     left: 0px;
     width: 600px;
@@ -33,14 +34,15 @@ section .color:nth-child(2){
     background: palegreen;
 }
 
-section .color:nth-child(3){
+section .color:nth-child(3) {
     bottom: 50px;
     right: 100px;
     width: 600px;
     height: 600px;
     background: skyblue;
 }
-section .color:nth-child(4){
+
+section .color:nth-child(4) {
     bottom: -400px;
     right: 400px;
     width: 600px;
@@ -48,13 +50,13 @@ section .color:nth-child(4){
     background: palegoldenrod;
 }
 
-.box{
+.box {
     position: relative;
 }
 
-.container{
+.container {
     position: relative;
-    z-index : 1;
+    z-index: 1;
     width: 500px;
     background: rgba(255, 255, 255, 0.1);
     border-radius: 1rem;
@@ -67,32 +69,35 @@ section .color:nth-child(4){
     border-right: 1px solid rgba(255, 255, 255, 0.2);
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
-.form{
-    position:relative;
+
+.form {
+    position: relative;
     width: 100%;
     height: 100%;
     padding: 40px;
 }
-.form h2{
+
+.form h2 {
     position: relative;
     color: #fff;
-    font-size : 2rem;
+    font-size: 2rem;
     font-weight: 700;
     letter-spacing: 1px;
     margin-bottom: 2rem;
 }
 
-.form .inputBox{
-    width:100%;
+.form .inputBox {
+    width: 100%;
     margin-top: 20px;
 }
-.form .inputBox input{
-    width:100%;
+
+.form .inputBox input {
+    width: 100%;
     transition: all 0.4s cubic-bezier(0.64, 0.09, 0.08, 1);
-	background: linear-gradient(to bottom, rgba(255, 255, 255, 0.1) 96%, #fff 4%);
-	background-position: -1000px 0;
-	background-repeat: no-repeat;
-    border:none;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.1) 96%, #fff 4%);
+    background-position: -1000px 0;
+    background-repeat: no-repeat;
+    border: none;
     outline: none;
     padding: 10px 20px;
     border-radius: 10px;
@@ -104,51 +109,60 @@ section .color:nth-child(4){
     color: #fff;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
 }
-.form .inputBox input::placeholder{
+
+.form .inputBox input::placeholder {
     color: #fff;
 }
 
-.form .inputBox input::before{
+.form .inputBox input::before {
     content: '';
     position: absolute;
-    
-    left: 0;bottom: -10px;
+
+    left: 0;
+    bottom: -10px;
     width: 9rem;
     height: 100px;
 }
 
-.form .inputBox input:focus{
-	background-position: 0 0;
+.form .inputBox input:focus {
+    background-position: 0 0;
 }
 
-.form .inputBox input[type="submit"]{
+.form .inputBox input[type="submit"] {
     background: #fff;
     color: grey;
     margin-bottom: 20px;
     font-weight: bold;
     transition: 0.4s ease-in-out;
 }
-.form .inputBox input[type="submit"]:hover{
+
+.form .inputBox input[type="submit"]:hover {
     background: var(--red);
     color: #fff;
 }
-.forget{
+
+.forget {
     margin-top: 5px;
     color: #fff;
 }
-.forget a{
+
+.forget a {
     transition: 0.2s ease-in-out;
     color: #fff;
     font-weight: bold;
 }
-.forget a:visited{
+
+.forget a:visited {
     color: #fff;
 }
-.forget a:hover{color: var(--red)}
 
-.glassBox{
+.forget a:hover {
+    color: var(--red)
+}
+
+.glassBox {
     position: absolute;
-    background: rgba(255,255,255, 0.1);
+    background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(5px);
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
@@ -157,34 +171,38 @@ section .color:nth-child(4){
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 
-.glassBox:nth-child(1){
+.glassBox:nth-child(1) {
     width: 50px;
     height: 50px;
 
     left: -50px;
     top: 200px;
 }
-.glassBox:nth-child(2){
+
+.glassBox:nth-child(2) {
     z-index: 2;
     width: 70px;
     height: 70px;
     left: -60px;
     top: 230px;
 }
-.glassBox:nth-child(3){
+
+.glassBox:nth-child(3) {
     width: 100px;
     height: 100px;
     right: -70px;
     top: -40px;
 }
-.glassBox:nth-child(4){
+
+.glassBox:nth-child(4) {
     z-index: 2;
     width: 60px;
     height: 60px;
     right: 90px;
     bottom: -30px;
 }
-.glassBox:nth-child(5){
+
+.glassBox:nth-child(5) {
     width: 50px;
     height: 50px;
     left: 50px;

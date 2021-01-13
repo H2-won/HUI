@@ -1,0 +1,44 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cursor Effect</title>
+    <link rel="stylesheet" href="src/static/css/cursorEffect.css">
+</head>
+
+<body>
+
+    <div class="navBar">
+        <div class="icon"><a href="/HUI">HUI</a></div>
+    </div>
+    <div class="cursor" color="#a29bfe" size="5px"></div>
+
+    <div class="container">
+        <div class="demoDiv1">Welcome</div>
+        <div class="demoDiv2">Cursor Effect</div>
+        <div class="demoDiv3">Emoji</div>
+        <div class="demoDiv4">
+            <a class="someButton" href="https://github.com/H2-won/MouseCursorEffects" target="_blank">Some Button</a>
+        </div>
+    </div>
+
+</body>
+
+<script src="src/static/js/cursorEffect.js"></script>
+<script>
+
+    // cursorEffect(componentClassName, hoverText, hoverColor, hoverSize, hoverThickness, fontSize)
+    cursorEffect('icon', '', '#F63E61');
+
+    cursorEffect('demoDiv1');
+
+    cursorEffect('demoDiv2', 'Hello !', '#ffeaa7', '6em', '6px', '1.5rem');
+
+    cursorEffect('demoDiv3', '❤', 'pink', '0', '2.5px', '3rem');
+
+    cursorEffect('someButton', 'Click', 'lightcoral', '3em');
+    
+</script>
+
+</html>

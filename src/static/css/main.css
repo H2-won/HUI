@@ -147,8 +147,8 @@ svg {
 }
 
 .component:nth-child(5) {
-  left: 17%;
-  top: 70%;
+  left: 15%;
+  top: 65%;
 }
 
 .component:nth-child(6) {
@@ -163,6 +163,11 @@ svg {
 
 .component:nth-child(8) {
   left: 83%;
+  top: 80%;
+}
+
+.component:nth-child(9) {
+  left: 32%;
   top: 80%;
 }
 

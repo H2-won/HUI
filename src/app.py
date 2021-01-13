@@ -38,6 +38,10 @@ def threedParallax():
 def glassMorphism():
     return render_template('glassMorphism.html')
 
+@app.route('/cursorEffect')
+def cursorEffect():
+    return render_template('cursorEffect.html')
+
 ### 실행
 if __name__ == '__main__':
     app.run(host='0.0.0.0', debug=True, port='5000')
