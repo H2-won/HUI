@@ -42,6 +42,11 @@ def glassMorphism():
 def cursorEffect():
     return render_template('cursorEffect.html')
 
+@app.route('/wave')
+def wave():
+    return render_template('wave.html')
+
+
 ### 실행
 if __name__ == '__main__':
     app.run(host='0.0.0.0', debug=True, port='5000')
