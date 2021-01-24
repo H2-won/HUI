@@ -46,6 +46,10 @@ def cursorEffect():
 def wave():
     return render_template('wave.html')
 
+@app.route('/textLoading')
+def textLoading():
+    return render_template('textLoading.html')
+
 
 ### 실행
 if __name__ == '__main__':
