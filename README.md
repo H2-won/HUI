@@ -19,8 +19,9 @@
 > 6. Power Of Light
 > 7. Horizontal Scrolling
 > 8. Text Loading
-> 9. Mouse Cursor Effects
-> 10. GlassMorphism
+> 9. Wave Animation
+> 10. Mouse Cursor Effects
+> 11. GlassMorphism
 
 ### Demo Site
 > https://h2-won.github.io/HUI/
