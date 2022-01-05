@@ -1,14 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@500;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Archivo:wght@500;700&display=swap");
 
 :root {
-  --deepPurple: #3E2551;
-  --purple: #D475E5;
-  --darkPurple: #B09AB4;
-  --red: #F63E61;
-  --darkPink: #FF6582;
+  --deepPurple: #3e2551;
+  --purple: #d475e5;
+  --darkPurple: #b09ab4;
+  --red: #f63e61;
+  --darkPink: #ff6582;
   --dark: #121212;
-  --darkGray: #3C4042;
+  --darkGray: #3c4042;
 }
 
 * {
@@ -16,7 +16,7 @@
   padding: 0;
   cursor: none;
   /* font-family: 'Frank Ruhl Libre', serif; */
-  font-family: 'Archivo', sans-serif;
+  font-family: "Archivo", sans-serif;
 }
 
 body {
@@ -27,13 +27,12 @@ body {
   background: var(--dark);
 }
 
-
 /* --------------------- background animation -------------------- */
 .svgContainer {
   z-index: 0;
   position: absolute;
   width: 100vw;
-  top:-26.25vw;
+  top: -26.25vw;
   /* position: absolute;
   top:-25vw;
   left:50%;
@@ -98,11 +97,11 @@ svg {
   font-size: 1.3rem;
   position: absolute;
   color: var(--purple);
-  transition: .3s all;
+  transition: 0.3s all;
 }
 
 .componentTitle {
-  transition: .3s all;
+  transition: 0.3s all;
 }
 
 .componentLine {
@@ -112,7 +111,7 @@ svg {
   background: var(--purple);
   text-align: center;
   margin: 4px 0 8px 0;
-  transition: .3s all;
+  transition: 0.3s all;
 }
 
 .componentBtn {
@@ -122,9 +121,8 @@ svg {
   border-radius: 6px;
   padding: 6px 8px 6 12px;
   letter-spacing: 4px;
-  transition: .3s all;
+  transition: 0.3s all;
 }
-
 
 .component:nth-child(1) {
   left: 5%;
@@ -181,7 +179,12 @@ svg {
   top: 12%;
 }
 
-.cursor{
+.component:nth-child(12) {
+  left: 84%;
+  top: 12%;
+}
+
+.cursor {
   z-index: 3;
   position: fixed;
   width: 0;
@@ -193,7 +196,7 @@ svg {
   transition: width 0.2s, height 0.2s;
 }
 
-.component:hover ~ .cursor{
+.component:hover ~ .cursor {
   width: 8rem !important;
   height: 8rem !important;
   border: 2.2px solid var(--red) !important;
