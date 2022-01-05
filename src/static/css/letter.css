@@ -1,0 +1,149 @@
+@import url(https://fonts.googleapis.com/css?family=Nobile:400italic,700italic);
+@import url(https://fonts.googleapis.com/css?family=Dancing+Script);
+
+* {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+body {
+  background: #e5e5e5;
+  padding: 50px;
+}
+
+#card {
+  max-width: 960px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+
+  transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
+  perspective: 5000px;
+  -moz-perspective: 5000px;
+  -webkit-perspective: 5000px;
+  position: relative;
+}
+
+#card-front,
+#card-back {
+  width: 50%;
+  height: 50vh;
+  -webkit-box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.25),
+    0 0 1px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.25), 0 0 1px rgba(0, 0, 0, 0.5);
+  box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.25), 0 0 1px rgba(0, 0, 0, 0.5);
+  position: absolute;
+  left: 50%;
+}
+
+#card-front div,
+#card-back div {
+  height: 100%;
+  padding: 2rem;
+  background: #ffefef;
+  color: black;
+}
+
+h1 {
+  text-align: center;
+  font-family: "Nobile", sans-serif;
+  font-style: italic;
+  font-size: 70px;
+  text-shadow: 4px 4px 0px rgba(0, 0, 0, 0.15),
+    1px 1px 0 rgba(255, 200, 200, 255), 2px 2px 0 rgba(255, 150, 150, 255),
+    3px 3px 0 rgba(255, 125, 125, 255);
+  color: #fff;
+}
+
+p {
+  margin-top: 1em;
+}
+
+p:first-child {
+  margin-top: 0;
+}
+
+p.signed {
+  margin-top: 1.5em;
+  text-align: center;
+  font-family: "Dancing Script", sans-serif;
+  font-size: 1.5em;
+}
+
+#card-back .insideWrap {
+  -webkit-box-shadow: inset 2px 0 1px rgba(0, 0, 0, 0.05);
+  -moz-box-shadow: inset 2px 0 1px rgba(0, 0, 0, 0.05);
+  box-shadow: inset 2px 0 1px rgba(0, 0, 0, 0.05);
+}
+
+#card-front {
+  background-image: linear-gradient(top, #f63e61 0%, #ff8888 100%);
+  background-image: -moz-linear-gradient(top, #f63e61 0%, #ff8888 100%);
+  background-image: -webkit-linear-gradient(top, #f63e61 0%, #ff8888 100%);
+  transform-origin: left;
+  -moz-transform-origin: left;
+  -webkit-transform-origin: left;
+  transition: transform 1s linear;
+  -moz-transition: -moz-transform 1s linear;
+  -webkit-transition: -webkit-transform 1s linear;
+  position: relative;
+}
+
+#card-front .frontOutsideWrap {
+  background-color: #f63e61;
+  transition: background 1s linear;
+}
+
+#card-front button {
+  position: absolute;
+  bottom: 1em;
+  right: -12px;
+  background: #f44;
+  color: #fff;
+  font-weight: bold;
+  font-size: 1.5em;
+  padding: 0.5em;
+  border: none;
+  box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.25), 0 0 1px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.25), 0 0 1px rgba(0, 0, 0, 0.4);
+  -webkit-box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.25),
+    0 0 1px rgba(0, 0, 0, 0.4);
+}
+
+#card-front button:hover,
+#card-front button:focus {
+  background: #f22;
+}
+
+#card-front .frontInsideWrap {
+  display: none;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  padding: 2em;
+  transform: rotateY(180deg);
+}
+
+#card-front .shadow {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+#close {
+  display: none;
+}
+
+.cursor {
+  z-index: 10;
+  position: fixed;
+  width: 0;
+  height: 0;
+  border: 4px solid yellow;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  transition: width 0.2s, height 0.2s;
+}

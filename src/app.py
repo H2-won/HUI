@@ -50,6 +50,10 @@ def wave():
 def textLoading():
     return render_template('textLoading.html')
 
+@app.route('/letter')
+def letter():
+    return render_template('letter.html')
+
 
 ### 실행
 if __name__ == '__main__':
