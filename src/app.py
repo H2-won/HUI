@@ -54,6 +54,9 @@ def textLoading():
 def letter():
     return render_template('letter.html')
 
+@app.route('/letterEffect')
+def letterEffect():
+    return render_template('letterEffect.html')
 
 ### 실행
 if __name__ == '__main__':
