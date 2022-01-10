@@ -1,11 +1,10 @@
 const envelope = document.querySelector(".envelope"),
   cardPreview = document.querySelector(".cardPreview"),
-  card = document.querySelector(".card");
+  background = document.querySelector(".background");
 
 envelope.addEventListener("click", () => {
-  cardPreview.style.transform = "translateY(-40%)";
-  card.style.display = "block";
+  cardPreview.classList.add("moveUp");
   setTimeout(() => {
-    card.style.opacity = "1";
-  }, 1500);
+    background.style.webkitTransform = "matrix(10, 0, 0, 10, 0, 0)";
+  }, 1250);
 });

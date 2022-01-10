@@ -1,8 +1,10 @@
 body {
-  background: white;
+  background: #242424;
   display: flex;
   justify-content: center;
   align-items: center;
+
+  overflow: hidden;
 }
 
 .envelope {
@@ -12,8 +14,8 @@ body {
   /* width: 60vw;
   height: 45vw; */
 
-  width: 32vw;
-  height: 24vw;
+  width: 28vw;
+  height: 21vw;
 
   background: red;
   display: flex;
@@ -23,8 +25,8 @@ body {
   cursor: pointer;
 }
 
-.envelope:before,
-.envelope:after {
+.envelope::before,
+.envelope::after {
   content: "";
   position: absolute;
   width: 0;
@@ -34,16 +36,16 @@ body {
   /* mobile */
   /* border-width: 22.5vw 30vw; */
 
-  border-width: 12vw 16vw;
+  border-width: 10.5vw 14vw;
 }
 
-.envelope:before {
+.envelope::before {
   border-bottom-color: red;
   top: -100%;
   left: 0px;
 }
 
-.envelope:after {
+.envelope::after {
   top: 0;
   border-left-color: red;
   border-bottom-color: red;
@@ -56,14 +58,32 @@ body {
 .cardPreview {
   width: 95%;
   height: 95%;
-  background: sandybrown;
+  background: #425642;
+  color: white;
 
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+}
 
-  transition: transform 1.5s ease;
+.cardPreview.moveUp {
+  animation: moveUp 2s ease;
+}
+
+@keyframes moveUp {
+  0% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+  60% {
+    transform: translateY(-40%);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-150%);
+    opacity: 0;
+  }
 }
 
 .card {
@@ -77,4 +97,16 @@ body {
   display: none;
   transition: opacity 1s ease;
   opacity: 0;
+}
+
+.background {
+  position: absolute;
+  top: -500px;
+  left: 35%;
+  width: 500px;
+  height: 500px;
+  background: #425642;
+  border-radius: 50%;
+  transform: matrix(0.5, 0, 0, 0.5, 0, 0);
+  transition: transform 2s ease;
 }
