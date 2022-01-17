@@ -17,6 +17,7 @@ envelope.addEventListener("click", () => {
   setTimeout(() => {
     card.style.opacity = "1";
     createRandomBubbles();
+    createContentController();
   }, 2250);
 });
 
@@ -41,4 +42,43 @@ function createRandomBubbles() {
     section.appendChild(createdBubble);
     i++;
   }
+}
+
+function createContentController() {
+  const contents = document.querySelectorAll(".content");
+  let page = 0;
+
+  const controllers = document.createElement("div");
+  controllers.classList = "controllers";
+
+  const controllerLeft = document.createElement("div");
+  controllerLeft.classList = "controllerLeft";
+  controllerLeft.addEventListener("click", () => {
+    if (page === 0) {
+      return;
+    } else if (page === 1) {
+      controllerLeft.classList.remove("active");
+    }
+    contents[page].classList.remove("active");
+    page -= 1;
+    contents[page].classList.add("active");
+    controllerRight.classList.add("active");
+  });
+
+  const controllerRight = document.createElement("div");
+  controllerRight.classList = "controllerRight active";
+  controllerRight.addEventListener("click", () => {
+    if (page === contents.length - 1) {
+      return;
+    } else if (page === contents.length - 2) {
+      controllerRight.classList.remove("active");
+    }
+    contents[page].classList.remove("active");
+    page += 1;
+    contents[page].classList.add("active");
+    controllerLeft.classList.add("active");
+  });
+
+  controllers.append(controllerLeft, controllerRight);
+  document.body.append(controllers);
 }

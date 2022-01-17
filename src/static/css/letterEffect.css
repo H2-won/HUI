@@ -1,10 +1,15 @@
 @import url(https://fonts.googleapis.com/css?family=Dancing+Script);
+@import url("https://fonts.googleapis.com/css2?family=Dongle:wght@300;400;700&family=Nanum+Pen+Script&family=Stylish&display=swap");
 
 body {
+  width: 100%;
+  height: 100%;
   background: #242424;
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: 0;
+  padding: 0;
 
   overflow: hidden;
 }
@@ -19,7 +24,7 @@ body {
   width: 28vw;
   height: 21vw;
 
-  background: red;
+  background: #d63031;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -42,16 +47,16 @@ body {
 }
 
 .envelope::before {
-  border-bottom-color: red;
+  border-bottom-color: #d63031;
   top: -100%;
   left: 0px;
 }
 
 .envelope::after {
   top: 0;
-  border-left-color: red;
-  border-bottom-color: red;
-  border-right-color: rgb(255, 85, 85);
+  border-left-color: #d63031;
+  border-bottom-color: #d63031;
+  border-right-color: indianred;
   border-radius: 0 0 5px 5px;
   transform: rotate(360deg);
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.25);
@@ -114,21 +119,21 @@ body {
 .card .sender {
   position: absolute;
   font-family: "Dancing Script", sans-serif;
-  font-size: 2rem;
+  font-size: 1.5rem;
+  margin: 0;
 }
 
 .card .recipient {
-  top: 5rem;
-  left: 5rem;
+  top: 3rem;
+  left: 3rem;
 }
 
 .card .sender {
-  bottom: 5rem;
-  right: 5rem;
+  bottom: 3rem;
+  right: 3rem;
 }
 
 .contents {
-  font-size: 1.5rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -137,6 +142,57 @@ body {
 
 .contents p {
   margin: 6px;
+  font-family: "Nanum Pen Script", cursive;
+  /* font-family: "Dongle", sans-serif; */
+  /* font-family: "Stylish", sans-serif; */
+  font-size: 2rem;
+}
+
+.content {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.content.active {
+  opacity: 1;
+}
+
+.controllers {
+  position: relative;
+  z-index: 4;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.controllers div {
+  width: 30%;
+  opacity: 0;
+  transition: all 0.5s;
+}
+
+.controllerLeft.active:hover,
+.controllerRight.active:hover {
+  cursor: pointer;
+  opacity: 0.15;
+}
+
+.controllerLeft.active:hover {
+  background: linear-gradient(to left, #425642, black);
+}
+
+.controllerRight.active:hover {
+  background: linear-gradient(to right, #425642, black);
+}
+
+.icon {
+  display: none;
 }
 
 .background {
@@ -180,5 +236,105 @@ body {
   100% {
     transform: translateY(-2000%);
     opacity: 0;
+  }
+}
+
+/* ----------------- velas ------------------ */
+.velas {
+  background: #ffffff;
+  border-radius: 4px;
+  position: relative;
+
+  width: 5px;
+  height: 35px;
+}
+
+.velas:after,
+.velas:before {
+  background: rgba(255, 0, 0, 0.4);
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2.22222222px;
+}
+
+.velas:after {
+  top: 25%;
+  left: 0;
+}
+
+.velas:before {
+  top: 45%;
+  left: 0;
+}
+
+/* ----------------- Fire ----------------- */
+.fuego {
+  border-radius: 100%;
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  margin-left: -2.6px;
+  width: 6.666666667;
+  height: 18px;
+}
+
+.fuego:nth-child(1) {
+  -webkit-animation: fuego 2s infinite;
+  animation: fuego 2s infinite;
+}
+
+.fuego:nth-child(2) {
+  -webkit-animation: fuego 1.5s infinite;
+  animation: fuego 1.5s infinite;
+}
+
+.fuego:nth-child(3) {
+  -webkit-animation: fuego 1s infinite;
+  animation: fuego 1s infinite;
+}
+
+.fuego:nth-child(4) {
+  -webkit-animation: fuego 0.5s infinite;
+  animation: fuego 0.5s infinite;
+}
+
+.fuego:nth-child(5) {
+  -webkit-animation: fuego 0.2s infinite;
+  animation: fuego 0.2s infinite;
+}
+
+@-webkit-keyframes fuego {
+  0%,
+  100% {
+    background: rgba(254, 248, 97, 0.5);
+    -webkit-box-shadow: 0 0 40px 10px rgba(248, 233, 209, 0.2);
+    box-shadow: 0 0 40px 10px rgba(248, 233, 209, 0.2);
+    -webkit-transform: translateY(0) scale(1);
+    transform: translateY(0) scale(1);
+  }
+  50% {
+    background: rgba(255, 50, 0, 0.1);
+    -webkit-box-shadow: 0 0 40px 20px rgba(248, 233, 209, 0.2);
+    box-shadow: 0 0 40px 20px rgba(248, 233, 209, 0.2);
+    -webkit-transform: translateY(-20px) scale(0);
+    transform: translateY(-20px) scale(0);
+  }
+}
+@keyframes fuego {
+  0%,
+  100% {
+    background: rgba(254, 248, 97, 0.5);
+    -webkit-box-shadow: 0 0 40px 10px rgba(248, 233, 209, 0.2);
+    box-shadow: 0 0 40px 10px rgba(248, 233, 209, 0.2);
+    -webkit-transform: translateY(0) scale(1);
+    transform: translateY(0) scale(1);
+  }
+  50% {
+    background: rgba(255, 50, 0, 0.1);
+    -webkit-box-shadow: 0 0 40px 20px rgba(248, 233, 209, 0.2);
+    box-shadow: 0 0 40px 20px rgba(248, 233, 209, 0.2);
+    -webkit-transform: translateY(-20px) scale(0);
+    transform: translateY(-20px) scale(0);
   }
 }
