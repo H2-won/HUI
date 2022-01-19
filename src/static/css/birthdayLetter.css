@@ -1,10 +1,9 @@
-@import url(https://fonts.googleapis.com/css?family=Dancing+Script);
 @import url("https://fonts.googleapis.com/css2?family=Dongle:wght@300;400;700&family=Nanum+Pen+Script&family=Stylish&display=swap");
 
 body {
-  width: 100%;
-  height: 100%;
-  background: #242424;
+  width: 100vw;
+  height: 100vh;
+  background: beige;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -16,66 +15,53 @@ body {
 
 .envelope {
   position: relative;
-
-  /* mobile */
-  /* width: 60vw;
-  height: 45vw; */
-
   width: 28vw;
   height: 21vw;
-
-  background: #d63031;
+  background: seashell;
   display: flex;
   justify-content: center;
   align-items: center;
-
   cursor: pointer;
 }
 
-.envelope::before,
-.envelope::after {
+.envelope:before,
+.envelope:after {
   content: "";
   position: absolute;
   width: 0;
   height: 0;
   border: 0 solid transparent;
-
-  /* mobile */
-  /* border-width: 22.5vw 30vw; */
-
   border-width: 10.5vw 14vw;
 }
 
-.envelope::before {
-  border-bottom-color: #d63031;
+.envelope:before {
+  border-bottom-color: pink;
   top: -100%;
   left: 0px;
 }
 
-.envelope::after {
+.envelope:after {
   top: 0;
-  border-left-color: #d63031;
-  border-bottom-color: #d63031;
-  border-right-color: indianred;
+  border-left-color: rgb(255, 172, 189);
+  border-bottom-color: pink;
+  border-right-color: rgb(255, 172, 189);
   border-radius: 0 0 5px 5px;
   transform: rotate(360deg);
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.25);
 }
 
 .cardPreview {
-  width: 95%;
-  height: 95%;
-  background: #425642;
-  color: white;
+  color: #fa5252;
+  width: 100%;
+  height: 100%;
+  font-size: 15rem;
 
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
 }
 
 .cardPreview p {
-  font-family: "Dancing Script", sans-serif;
   font-size: 2rem;
 }
 
@@ -89,11 +75,11 @@ body {
     opacity: 1;
   }
   60% {
-    transform: translateY(-40%);
+    transform: translateY(-70%);
     opacity: 1;
   }
   100% {
-    transform: translateY(-150%);
+    transform: translateY(-400%);
     opacity: 0;
   }
 }
@@ -118,7 +104,7 @@ body {
 .card .recipient,
 .card .sender {
   position: absolute;
-  font-family: "Dancing Script", sans-serif;
+  font-family: "Nanum Pen Script", cursive;
   font-size: 1.5rem;
   margin: 0;
 }
@@ -143,13 +129,12 @@ body {
 .contents p {
   margin: 6px;
   font-family: "Nanum Pen Script", cursive;
-  /* font-family: "Dongle", sans-serif; */
-  /* font-family: "Stylish", sans-serif; */
-  font-size: 2rem;
 }
 
 .content {
   position: absolute;
+  font-size: 2rem;
+  margin: 2rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -160,6 +145,10 @@ body {
 
 .content.active {
   opacity: 1;
+}
+
+.lastContent {
+  font-size: 2.5rem;
 }
 
 .controllers {
@@ -177,20 +166,6 @@ body {
   transition: all 0.5s;
 }
 
-.controllerLeft.active:hover,
-.controllerRight.active:hover {
-  cursor: pointer;
-  opacity: 0.15;
-}
-
-.controllerLeft.active:hover {
-  background: linear-gradient(to left, #425642, black);
-}
-
-.controllerRight.active:hover {
-  background: linear-gradient(to right, #425642, black);
-}
-
 .icon {
   display: none;
 }
@@ -199,10 +174,9 @@ body {
   position: absolute;
   z-index: 2;
   top: -500px;
-  left: 35%;
   width: 500px;
   height: 500px;
-  background: #425642;
+  background: #fa5252;
   border-radius: 50%;
   transform: matrix(0.5, 0, 0, 0.5, 0, 0);
   transition: transform 2s ease;
@@ -212,14 +186,14 @@ body {
 
 .card i {
   position: absolute;
-  background: #a6cf98;
+  background: thistle;
   border-radius: 100%;
   animation: moveBubbles linear infinite;
 }
 
 .card i:nth-child(even) {
   background: transparent;
-  border: 1px solid #a6cf98;
+  border: 1px solid thistle;
 }
 
 @keyframes moveBubbles {
@@ -245,8 +219,9 @@ body {
   border-radius: 4px;
   position: relative;
 
-  width: 5px;
-  height: 35px;
+  width: 6px;
+  height: 40px;
+  margin-bottom: 6px;
 }
 
 .velas:after,
@@ -272,11 +247,10 @@ body {
 .fuego {
   border-radius: 100%;
   position: absolute;
-  top: -20px;
-  left: 50%;
-  margin-left: -2.6px;
-  width: 6.666666667;
-  height: 18px;
+  top: -24px;
+  margin-left: -1px;
+  width: 8;
+  height: 20px;
 }
 
 .fuego:nth-child(1) {
@@ -336,5 +310,63 @@ body {
     box-shadow: 0 0 40px 20px rgba(248, 233, 209, 0.2);
     -webkit-transform: translateY(-20px) scale(0);
     transform: translateY(-20px) scale(0);
+  }
+}
+
+/* -------------------- Media query ----------------- */
+/* mobile */
+@media (min-width: 350px) and (max-width: 768px) {
+  .card .recipient {
+    top: 2rem;
+    left: 2rem;
+  }
+
+  .card .sender {
+    bottom: 2rem;
+    right: 2rem;
+  }
+
+  .content {
+    font-size: 24px;
+  }
+
+  .lastContent {
+    font-size: 2rem;
+  }
+
+  .envelope {
+    width: 60vw;
+    height: 45vw;
+  }
+
+  .envelope:before,
+  .envelope:after {
+    border-width: 22.5vw 30vw;
+  }
+
+  .cardPreview {
+    font-size: 10rem;
+  }
+
+  .controllers div {
+    width: 40%;
+  }
+}
+
+/* hover:hover는 마우스가 있는 장치의 경우 true 처리된다.
+  hover:none은 터치 입력이 사용되는 장치의 경우 true */
+@media (hover: hover) {
+  .controllerLeft.active:hover,
+  .controllerRight.active:hover {
+    cursor: pointer;
+    opacity: 0.15;
+  }
+
+  .controllerLeft.active:hover {
+    background: linear-gradient(to left, #fa5252, black);
+  }
+
+  .controllerRight.active:hover {
+    background: linear-gradient(to right, #fa5252, black);
   }
 }
