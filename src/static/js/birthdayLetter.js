@@ -61,7 +61,10 @@ function createContentController() {
     }
     contents[page].classList.remove("active");
     page -= 1;
-    contents[page].classList.add("active");
+    setTimeout(() => {
+      contents[page].classList.add("active");
+    }, 1000);
+
     controllerRight.classList.add("active");
   });
 
@@ -75,7 +78,10 @@ function createContentController() {
     }
     contents[page].classList.remove("active");
     page += 1;
-    contents[page].classList.add("active");
+    setTimeout(() => {
+      contents[page].classList.add("active");
+    }, 1000);
+
     controllerLeft.classList.add("active");
   });
 

@@ -184,6 +184,11 @@ svg {
   top: 12%;
 }
 
+.component:nth-child(13) {
+  left: 8%;
+  top: 84%;
+}
+
 .cursor {
   z-index: 3;
   position: fixed;

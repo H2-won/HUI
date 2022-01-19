@@ -54,9 +54,9 @@ def textLoading():
 def letter():
     return render_template('letter.html')
 
-@app.route('/letterEffect')
+@app.route('/birthdayLetter')
 def letterEffect():
-    return render_template('letterEffect.html')
+    return render_template('birthdayLetter.html')
 
 ### 실행
 if __name__ == '__main__':
