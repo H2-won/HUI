@@ -1,8 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Dongle:wght@300;400;700&family=Nanum+Pen+Script&family=Stylish&display=swap");
 
 body {
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   background: beige;
   display: flex;
   justify-content: center;
@@ -93,6 +93,7 @@ body {
   color: #f2ffe9;
 
   transition: opacity 2s ease;
+  -webkit-transition: opacity 2s ease;
   opacity: 0;
 
   display: none;
@@ -120,6 +121,8 @@ body {
 }
 
 .contents {
+  width: 100%;
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -129,6 +132,8 @@ body {
 .contents p {
   margin: 6px;
   font-family: "Nanum Pen Script", cursive;
+  width: 100%;
+  text-align: center;
 }
 
 .content {
@@ -141,6 +146,7 @@ body {
   align-items: center;
   opacity: 0;
   transition: opacity 1s ease-in-out;
+  -webkit-transition: opacity 1s ease-in-out;
 }
 
 .content.active {
@@ -164,6 +170,7 @@ body {
   width: 30%;
   opacity: 0;
   transition: all 0.5s;
+  -webkit-transition: all 0.5s;
 }
 
 .icon {
@@ -328,6 +335,7 @@ body {
 
   .content {
     font-size: 24px;
+    margin: 6px 12px 12px 6px;
   }
 
   .lastContent {
