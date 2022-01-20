@@ -54,7 +54,7 @@ body {
   color: #fa5252;
   width: 100%;
   height: 100%;
-  font-size: 15rem;
+  font-size: 21vw;
 
   display: flex;
   justify-content: center;
@@ -322,7 +322,7 @@ body {
 
 /* -------------------- Media query ----------------- */
 /* mobile */
-@media (min-width: 350px) and (max-width: 768px) {
+@media (max-width: 768px) {
   .card .recipient {
     top: 2rem;
     left: 2rem;
@@ -335,7 +335,7 @@ body {
 
   .content {
     font-size: 24px;
-    margin: 6px 12px 12px 6px;
+    margin: 7.5px 15px 15px 7.5px;
   }
 
   .lastContent {
@@ -353,7 +353,7 @@ body {
   }
 
   .cardPreview {
-    font-size: 10rem;
+    font-size: 45vw;
   }
 
   .controllers div {
