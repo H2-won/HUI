@@ -22,6 +22,8 @@
 > 9. Wave Animation
 > 10. Mouse Cursor Effects
 > 11. GlassMorphism
+> 12. Letter Animation
+> 13. Birthday Letter
 
 ### Demo Site
 > https://h2-won.github.io/HUI/
